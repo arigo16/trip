@@ -92,5 +92,4 @@
         <li role="presentation" class="divider"></li>
         <li><a href="lout.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>
     </ul>
-
 </div>

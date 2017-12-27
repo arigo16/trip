@@ -116,6 +116,9 @@ isset ($_GET['page']) ? $page = $_GET['page'] : $page = 'home';
 		})
 	</script>	
 </body>
+<?php
+	include ('include/footer.php');
+?>
 </html>
 <?php
 }
