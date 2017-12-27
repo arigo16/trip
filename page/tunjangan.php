@@ -2,7 +2,7 @@
     <div class="panel-heading">Tunjangan Baru</div>
     <div class="panel-body">
         <div class="col-lg-8">
-            <form class="form-horizontal" action="act/inptjbtn.php" method="post">
+            <form class="form-horizontal" action="act/inputtunjangan.php" method="post">
                 <div class="form-group">
                     <label for="" class="control-label col-sm-3">ID Tunjangan</label>
                     <div class="col-sm-9">
@@ -77,7 +77,7 @@
 							<td><?php echo $rr['uang_saku'];?></td>
 							<td><?php echo $rr['bea_hotel'];?></td>
 							<td><?php echo $rr['transport'];?></td>
-                            <td>[<a href="index.php?page=tunjangan-edit&id=<?php echo $rr['id'];?>">Edit</a>] [<a href="act/tunjdel.php?id=<?php echo $rr['id'];?>" onclick="return confirm('Yakin ingin hpus data ?')">Hapus</a>]</td>
+                            <td>[<a href="index.php?page=tunjangan-edit&id=<?php echo $rr['id'];?>">Edit</a>] [<a href="act/tunjdel.php?id=<?php echo $rr['id'];?>" onclick="return confirm('Yakin ingin hapus data ?')">Hapus</a>]</td>
                         </tr>
                         <?php
                     }

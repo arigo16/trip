@@ -8,11 +8,11 @@ foreach ($r as $rr) {
         <div class="panel-heading">Form Edit Tunjangan</div>
         <div class="panel-body">
             <div class="col-lg-8">
-                <form class="form-horizontal" action="act/usup.php?id=<?php echo $id; ?>" method="post">
+                <form class="form-horizontal" action="act/ubahtunjangan.php?id=" method="post">
                     <div class="form-group">
                         <label for="" class="control-label col-sm-3">ID</label>
                         <div class="col-sm-9">
-                            <input type="text" name="username" class="form-control" value="<?php echo $id ?>" readonly>
+                            <input type="text" name="idtunj" class="form-control" value="<?php echo $id ?>" readonly>
                         </div>
                     </div>
                   <div class="form-group">
@@ -46,7 +46,7 @@ foreach ($r as $rr) {
 					<div class="form-group">
                         <label for="" class="control-label col-sm-3">TRANSPORT</label>
                         <div class="col-sm-9">
-                            <input type="text" name="transport" class="form-control" value="<?php echo $rr['transport']; ?>" >
+                            <input type="text" name="biayatransport" class="form-control" value="<?php echo $rr['transport']; ?>" >
                         </div>
                     </div>
                     <div class="form-group">
