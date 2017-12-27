@@ -25,12 +25,17 @@ foreach ($r as $rr) {
                     <div class="form-group">
                         <label for="" class="control-label col-sm-3">Jabatan</label>
                         <div class="col-sm-9">
-							<select class="form-control" name="sts">
-                                <option value="1121" <?php if($jabatan=='1121'){echo "selected"; } ?> >Manajer</option>
-                                <option value="1122" <?php if($jabatan=='1122'){echo "selected"; } ?> >Supervisor</option>
-								<option value="1123" <?php if($jabatan=='1123'){echo "selected"; } ?> >Staff</option>
-                                <option value="1124" <?php if($jabatan=='1124'){echo "selected"; } ?> >Mekanik</option>
-                            </select>
+						<select name="jabatan" class="form-control" required>
+                            <option value="">--Pilih--</option>
+                            <?php
+                            $s = $con->query("SELECT * FROM jabatan_tb");
+                            foreach ($s as $ss) {
+                                ?>
+                                <option value="<?php echo $ss['id'];?>"><?php echo ucfirst($ss['nama_jabatan']);?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                         </div>
                     </div>
                     <div class="form-group">
