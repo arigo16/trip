@@ -25,10 +25,15 @@
                     </svg>
                     Form Pengajuan</a></li>
 					<li><a href="index.php?page=inptjabatan">
-                    <svg class="glyph stroked user">
-                        <use xlink:href="#stroked-user-add"></use>
+                    <svg class="glyph stroked add">
+                        <use xlink:href="#stroked-add"></use>
                     </svg>
                     Jabatan Baru</a></li>
+					<li><a href="index.php?page=tunjangan">
+                    <svg class="glyph stroked add">
+                        <use xlink:href="#stroked-add"></use>
+                    </svg>
+                    Tunjangan</a></li>
             <li><a href="index.php?page=appadm">
                     <svg class="glyph stroked star">
                         <use xlink:href="#stroked-star"></use>
