@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Des 2017 pada 08.56
+-- Generation Time: 27 Des 2017 pada 11.17
 -- Versi Server: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -85,7 +85,14 @@ CREATE TABLE IF NOT EXISTS `pengajuan_tb` (
   `AppDateDiv` date DEFAULT NULL,
   `AppFin` varchar(20) DEFAULT NULL,
   `AppDiv` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pengajuan_tb`
+--
+
+INSERT INTO `pengajuan_tb` (`id`, `nik`, `tg_berangkat`, `tg_pulang`, `tujuan`, `u_saku`, `u_hotel`, `u_trans`, `app_divhead`, `app_finance`, `CreatedDate`, `AppDateFin`, `AppDateDiv`, `AppFin`, `AppDiv`) VALUES
+(1, 23457, '2017-12-27', '2017-12-29', 'Batam', 70000, 200000, 100000, 'setuju', 'setuju', '2017-12-27', '2017-12-27', '2017-12-27', 'kdr', 'admin');
 
 -- --------------------------------------------------------
 
@@ -176,7 +183,7 @@ ALTER TABLE `user_tb`
 -- AUTO_INCREMENT for table `pengajuan_tb`
 --
 ALTER TABLE `pengajuan_tb`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tunjangan_tb`
 --
