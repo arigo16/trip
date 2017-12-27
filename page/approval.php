@@ -5,7 +5,7 @@ foreach ($r as $rr) {
 	$appadmin = $rr['app_divhead'];
     ?>
     <div class="panel panel-default">
-        <div class="panel-heading">Form User</div>
+        <div class="panel-heading">Form Approve Div. Head</div>
         <div class="panel-body">
             <div class="col-lg-8">
                 <form class="form-horizontal" action="act/apup.php?id=<?php echo $id; ?>" method="post">
