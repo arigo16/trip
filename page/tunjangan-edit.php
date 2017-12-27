@@ -9,8 +9,20 @@
                         <input type="text" name="nik" class="form-control" required>
                     </div>
                 </div>
+				<div class="form-group">
+                    <label for="" class="control-label col-sm-3">Uang Saku</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="nik" class="form-control" required>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="" class="control-label col-sm-3">Biaya Hotel</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="nik" class="form-control" required>
+                    </div>
+                </div>
                 <div class="form-group">
-                    <label for="" class="control-label col-sm-3">Nama Jabatan Baru</label>
+                    <label for="" class="control-label col-sm-3">Biaya Transport</label>
                     <div class="col-sm-9">
                         <input type="text" name="nama" class="form-control" required>
                     </div>
@@ -32,18 +44,21 @@
                 <table class="table table-striped">
                     <tr>
                         <th>ID JABATAN</th>
-                        <th>NAMA JABATAN</th>
+                        <th>UANG SAKU</th>
+						<th>BIAYA HOTEL</th>
+                      	<th>BIAYA TRANSPORT</th>
 						<th>ACTION</th>
-                      
                     </tr>
                     <?php
-                    $r = $con->query("Select * From jabatan_tb");
+                    $r = $con->query("Select * From tunjangan_tb");
                     while ($rr = $r->fetch_array()) {
                         ?>
                         <tr>
                             <td><?php echo $rr['id'];?></td>
-                            <td><?php echo $rr['nama_jabatan'];?></td>
-                            <td>[<a href="index.php?page=inptjabatan-edit&id=<?php echo $rr['id'];?>">Edit</a>] [<a href="act/jabdel.php?id=<?php echo $rr['id'];?>" onclick="return confirm('Yakin ingin hpus data ?')">Hapus</a>]</td>
+                            <td><?php echo $rr['jabatan_id'];?></td>
+							<td><?php echo $rr['bea_hotel'];?></td>
+							<td><?php echo $rr['transport'];?></td>
+                            <td>[<a href="index.php?page=kare&id=<?php echo $rr['nik'];?>">Edit</a>] [<a href="act/kardel.php?id=<?php echo $rr['nik'];?>" onclick="return confirm('Yakin ingin hpus data ?')">Hapus</a>]</td>
                         </tr>
                         <?php
                     }
