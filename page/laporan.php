@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </form>
-			<form class="form-horizontal" action="index.php?page=item2" method="post">
+			<form class="form-horizontal" action="laporan/item2.php" method="post" target="_blank">
                 <div class="form-group">
                     <label for="" class="control-label col-sm-3">Karyawan</label>
                     <div class="col-sm-9">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </form>
-			<form class="form-horizontal" action="index.php?page=item3" method="post">
+			<form class="form-horizontal" action="laporan/item3.php" method="post" target="_blank">
                 <div class="form-group">
                     <label for="" class="control-label col-sm-3">Periode</label>
                     <div class="col-sm-5">
