@@ -1,5 +1,5 @@
-<footer class="main-footer">
-    <div class="text-center hidden-xs">
-		<strong>Copyright &copy; 2017 <a href="http://findcode.co.id">Findcode</a>.</strong> All rights reserved.
-    </div>
-</footer>
+<div class="row">
+<div class="col-sm-12 text-center">
+	<p class="back-link">Copyright 2017 By <a href="http://www.findcode.co.id">FindCode</a></p>
+</div>
+</div>

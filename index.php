@@ -66,7 +66,9 @@ isset ($_GET['page']) ? $page = $_GET['page'] : $page = 'home';
                 ?>
             </div>
         </div>
-
+<?php
+	include ('include/footer.php');
+?>	
 	</div>	<!--/.main-->
 
 	<script src="js/jquery-2.2.1.min.js"></script>
@@ -114,11 +116,8 @@ isset ($_GET['page']) ? $page = $_GET['page'] : $page = 'home';
 		$(window).on('resize', function () {
 		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 		})
-	</script>	
+	</script>
 </body>
-<?php
-	include ('include/footer.php');
-?>
 </html>
 <?php
 }
