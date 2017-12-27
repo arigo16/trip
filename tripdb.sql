@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 26 Des 2017 pada 11.30
+-- Generation Time: 27 Des 2017 pada 08.56
 -- Versi Server: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -78,19 +78,14 @@ CREATE TABLE IF NOT EXISTS `pengajuan_tb` (
   `u_saku` double NOT NULL,
   `u_hotel` double NOT NULL,
   `u_trans` double NOT NULL,
-  `app_admin` varchar(20) NOT NULL,
-  `app_finance` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `pengajuan_tb`
---
-
-INSERT INTO `pengajuan_tb` (`id`, `nik`, `tg_berangkat`, `tg_pulang`, `tujuan`, `u_saku`, `u_hotel`, `u_trans`, `app_admin`, `app_finance`) VALUES
-(1, 23456, '2017-08-25', '2017-08-30', 'batam', 100000, 350000, 200000, 'setuju', 'setuju'),
-(2, 23458, '2017-08-30', '2017-09-01', 'Surabaya', 100000, 350000, 200000, 'setuju', 'setuju'),
-(3, 23456, '2017-09-01', '2017-09-02', 'Medan', 100000, 350000, 200000, 'setuju', 'setuju'),
-(4, 23458, '2017-08-31', '2017-09-05', 'Belitung', 100000, 300000, 150000, 'setuju', 'setuju');
+  `app_divhead` varchar(20) NOT NULL,
+  `app_finance` varchar(20) NOT NULL,
+  `CreatedDate` date DEFAULT NULL,
+  `AppDateFin` date DEFAULT NULL,
+  `AppDateDiv` date DEFAULT NULL,
+  `AppFin` varchar(20) DEFAULT NULL,
+  `AppDiv` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -181,7 +176,7 @@ ALTER TABLE `user_tb`
 -- AUTO_INCREMENT for table `pengajuan_tb`
 --
 ALTER TABLE `pengajuan_tb`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tunjangan_tb`
 --

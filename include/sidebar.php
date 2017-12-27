@@ -25,13 +25,13 @@
                     </svg>
                     Form Pengajuan</a></li>
 					<li><a href="index.php?page=inptjabatan">
-                    <svg class="glyph stroked add">
-                        <use xlink:href="#stroked-add"></use>
+                    <svg class="glyph stroked app-window">
+                        <use xlink:href="#stroked-app-window"></use>
                     </svg>
                     Jabatan Baru</a></li>
 					<li><a href="index.php?page=tunjangan">
-                    <svg class="glyph stroked add">
-                        <use xlink:href="#stroked-add"></use>
+                    <svg class="glyph stroked bag">
+                        <use xlink:href="#stroked-bag"></use>
                     </svg>
                     Tunjangan</a></li>
             <li><a href="index.php?page=appadm">
