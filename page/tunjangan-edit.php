@@ -1,71 +1,66 @@
-<div class="panel panel-default">
-    <div class="panel-heading">Jabatan Baru</div>
-    <div class="panel-body">
-        <div class="col-lg-8">
-            <form class="form-horizontal" action="act/inptjbtn.php" method="post">
-                <div class="form-group">
-                    <label for="" class="control-label col-sm-3">ID Jabatan</label>
+<?php
+$id = $_GET['id'];
+$r = $con->query("SELECT * FROM tunjangan_tb WHERE id = '$id'");
+foreach ($r as $rr) {
+	$level = $rr['jabatan_id'];
+    ?>
+    <div class="panel panel-default">
+        <div class="panel-heading">Form Edit Tunjangan</div>
+        <div class="panel-body">
+            <div class="col-lg-8">
+                <form class="form-horizontal" action="act/usup.php?id=<?php echo $id; ?>" method="post">
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-3">ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="username" class="form-control" value="<?php echo $id ?>" readonly>
+                        </div>
+                    </div>
+                  <div class="form-group">
+                    <label for="" class="control-label col-sm-3">Jabatan</label>
                     <div class="col-sm-9">
-                        <input type="text" name="nik" class="form-control" required>
+                        <select name="jabatan" class="form-control" required>
+                            <option value="">--Pilih--</option>
+                            <?php
+                            $rx = $con->query("SELECT * FROM jabatan_tb");
+                            foreach ($rx as $rrx) {
+                                ?>
+                                <option value="<?php echo $rrx['id'];?>"><?php echo ucfirst($rrx['nama_jabatan']);?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
                 </div>
-				<div class="form-group">
-                    <label for="" class="control-label col-sm-3">Uang Saku</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="nik" class="form-control" required>
+                 <div class="form-group">
+                        <label for="" class="control-label col-sm-3">UANG SAKU</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="uangsaku" class="form-control" value="<?php echo $rr['uang_saku']; ?>" >
+                        </div>
                     </div>
-                </div>
-				<div class="form-group">
-                    <label for="" class="control-label col-sm-3">Biaya Hotel</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="nik" class="form-control" required>
+					<div class="form-group">
+                        <label for="" class="control-label col-sm-3">BIAYA HOTEL</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="biayahotel" class="form-control" value="<?php echo $rr['bea_hotel']; ?>" >
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="" class="control-label col-sm-3">Biaya Transport</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="nama" class="form-control" required>
+					<div class="form-group">
+                        <label for="" class="control-label col-sm-3">TRANSPORT</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="transport" class="form-control" value="<?php echo $rr['transport']; ?>" >
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <div class="btn-group col-sm-9 col-sm-offset-3">
-                        <button class="btn btn-primary" type="submit" >Simpan</button>
-                        <button class="btn btn-primary" type="reset" >Reset</button>
+                    <div class="form-group">
+                        <div class="btn-group col-sm-9 col-sm-offset-3">
+                            <button class="btn btn-primary" type="submit">Update</button>
+                            <a class="btn btn-primary" onclick="history.go(-1);return false;">Cancel</a>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-lg-4">
+                </form>
+            </div>
+            <div class="col-lg-4">
 
-        </div>
-        <div class="col-sm-12">
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <tr>
-                        <th>ID JABATAN</th>
-                        <th>UANG SAKU</th>
-						<th>BIAYA HOTEL</th>
-                      	<th>BIAYA TRANSPORT</th>
-						<th>ACTION</th>
-                    </tr>
-                    <?php
-                    $r = $con->query("Select * From tunjangan_tb");
-                    while ($rr = $r->fetch_array()) {
-                        ?>
-                        <tr>
-                            <td><?php echo $rr['id'];?></td>
-                            <td><?php echo $rr['jabatan_id'];?></td>
-							<td><?php echo $rr['bea_hotel'];?></td>
-							<td><?php echo $rr['transport'];?></td>
-                            <td>[<a href="index.php?page=kare&id=<?php echo $rr['nik'];?>">Edit</a>] [<a href="act/kardel.php?id=<?php echo $rr['nik'];?>" onclick="return confirm('Yakin ingin hpus data ?')">Hapus</a>]</td>
-                        </tr>
-                        <?php
-                    }
-                    ?>
-                </table>
             </div>
         </div>
     </div>
-</div>
-
+    <?php
+} ?>
