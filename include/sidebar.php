@@ -19,16 +19,16 @@
                         <use xlink:href="#stroked-line-graph"></use>
                     </svg>
                     Data Karyawan</a></li>
-					<li><a href="index.php?page=karyawan">
-                    <svg class="glyph stroked line-graph">
-                        <use xlink:href="#stroked-line-graph"></use>
-                    </svg>
-                    Data Karyawan</a></li>
-            <li><a href="index.php?page=form">
+			<li><a href="index.php?page=form">
                     <svg class="glyph stroked pencil">
                         <use xlink:href="#stroked-pencil"></use>
                     </svg>
                     Form Pengajuan</a></li>
+					<li><a href="index.php?page=inptjabatan">
+                    <svg class="glyph stroked user">
+                        <use xlink:href="#stroked-user-add"></use>
+                    </svg>
+                    Jabatan Baru</a></li>
             <li><a href="index.php?page=appadm">
                     <svg class="glyph stroked star">
                         <use xlink:href="#stroked-star"></use>
