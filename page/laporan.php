@@ -2,7 +2,7 @@
     <div class="panel-heading">Form Laporan</div>
     <div class="panel-body">
         <div class="col-lg-8">
-            <form class="form-horizontal" action="laporan/item1.php" method="post">
+            <form class="form-horizontal" action="laporan/item1.php" method="post" target="_blank">
                 <div class="form-group">
                     <label for="" class="control-label col-sm-3">Karyawan</label>
                     <div class="col-sm-9">
