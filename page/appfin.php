@@ -13,11 +13,12 @@
                         <th>Uang saku</th>
                         <th>Hotel</th>
                         <th>Transport</th>
+						<th>Total Akomodasi</th>
                         <th>Approve Finance</th>
                         <th>Action</th>
                     </tr>
                     <?php
-                    $r = $con->query("SELECT pengajuan_tb.*,karyawan_tb.nama FROM pengajuan_tb INNER JOIN karyawan_tb ON pengajuan_tb.nik = karyawan_tb.nik");
+                    $r = $con->query("SELECT pengajuan_tb.*,karyawan_tb.nama,u_saku+u_hotel+u_trans as 'Akomodasi' FROM pengajuan_tb INNER JOIN karyawan_tb ON pengajuan_tb.nik = karyawan_tb.nik");
                     while ($rr = $r->fetch_array()) {
                     ?>
                     <tr>
@@ -29,6 +30,7 @@
                         <td><?php echo $rr['u_saku'];?></td>
                         <td><?php echo $rr['u_hotel'];?></td>
                         <td><?php echo $rr['u_trans'];?></td>
+						<td><?php echo $rr['Akomodasi'];?></td>
                         <td><?php echo ucfirst($rr['app_finance']);?></td>
                         <td>[<a href="index.php?page=approval2&id=<?php echo $rr['id']; ?>"> Ubah </a> ]</td>
                         <?php

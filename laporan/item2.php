@@ -29,18 +29,20 @@ $pdf->Cell(10,7,'',0,1);
  
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(20,6,'NIK',1,0);
-$pdf->Cell(50,6,'Tgl Berangkat',1,0);
-$pdf->Cell(50,6,'Tgl Pulang',1,0);
+$pdf->Cell(40,6,'Nama',1,0);
+$pdf->Cell(30,6,'Tgl Berangkat',1,0);
+$pdf->Cell(30,6,'Tgl Pulang',1,0);
 $pdf->Cell(40,6,'Tujuan',1,0);
 $pdf->Cell(30,6,'Akomodasi',1,1);
  
 $pdf->SetFont('Arial','',10);
  
-$d = $con->query("SELECT nik, tg_berangkat, tg_pulang, tujuan, u_saku+u_hotel+u_trans as 'akomodasi' FROM pengajuan_tb WHERE nik = '$id'");
+$d = $con->query("SELECT pengajuan_tb.*,karyawan_tb.nama,u_saku+u_hotel+u_trans as 'Akomodasi' FROM pengajuan_tb INNER JOIN karyawan_tb ON pengajuan_tb.nik = karyawan_tb.nik WHERE pengajuan_tb.nik = '$id'");
     foreach ($d as $dd) {
     $pdf->Cell(20,6,$dd['nik'],1,0);
-    $pdf->Cell(50,6,$dd['tg_berangkat'],1,0);
-    $pdf->Cell(50,6,$dd['tg_pulang'],1,0);
+	$pdf->Cell(40,6,$dd['nama'],1,0);
+    $pdf->Cell(30,6,$dd['tg_berangkat'],1,0);
+    $pdf->Cell(30,6,$dd['tg_pulang'],1,0);
     $pdf->Cell(40,6,$dd['tujuan'],1,0); 
 	$pdf->Cell(30,6,$dd['akomodasi'],1,1); 
 }

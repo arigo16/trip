@@ -73,12 +73,14 @@
                         <th>Tgl Berangkat</th>
                         <th>Tgl Kembali</th>
                         <th>Tujuan</th>
+						<th>Akomodasi</th>
+						<th>Tgl Pengajuan</th>
                         <th>Approve Div.Head</th>
                         <th>Approve Finance</th>
                     </tr>
                     <?php
 					$nik = $_SESSION['username'];
-                    $r = $con->query("SELECT pengajuan_tb.*,karyawan_tb.nama FROM pengajuan_tb INNER JOIN karyawan_tb ON pengajuan_tb.nik = karyawan_tb.nik WHERE pengajuan_tb.nik ='$nik'");
+                    $r = $con->query("SELECT pengajuan_tb.*,karyawan_tb.nama,u_saku+u_hotel+u_trans as 'Akomodasi' FROM pengajuan_tb INNER JOIN karyawan_tb ON pengajuan_tb.nik = karyawan_tb.nik WHERE pengajuan_tb.nik ='$nik'");
                     while ($rr = $r->fetch_array()) {
                         ?>
                         <tr>
@@ -87,8 +89,10 @@
                             <td><?php echo $rr['tg_berangkat'];?></td>
                             <td><?php echo $rr['tg_pulang'];?></td>
                             <td><?php echo ucfirst($rr['tujuan']);?></td>
-                            <td><?php echo ucfirst($rr['app_divhead']);?></td>
-                            <td><?php echo ucfirst($rr['app_finance']);?></td>
+							<td><?php echo ucfirst($rr['Akomodasi']);?></td>
+							<td><?php echo ucfirst($rr['CreatedDate']);?></td>
+                            <td><?php echo "[ ".$rr['app_divhead']." ] ".ucfirst($rr['AppDiv']);?></td>
+                            <td><?php echo "[ ".$rr['app_finance']." ] ".ucfirst($rr['AppFin']);?></td>
                         <?php
                     }
                     ?>
