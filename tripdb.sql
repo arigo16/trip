@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Des 2017 pada 11.17
+-- Generation Time: 28 Des 2017 pada 04.00
 -- Versi Server: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -59,9 +59,9 @@ CREATE TABLE IF NOT EXISTS `karyawan_tb` (
 --
 
 INSERT INTO `karyawan_tb` (`nik`, `nama`, `jabatan`, `divisi`) VALUES
-(23456, 'sarman', 1121, 'Bengkel'),
-(23457, 'jalal', 1123, 'Bengkel'),
-(23458, 'Timbul Santoso', 1122, 'Technical Service');
+(23456, 'Arigo', 1121, 'Technical Support'),
+(23457, 'Dwi Budi Kurniawan', 1122, 'Bengkel'),
+(23458, 'Nasrul Hidayah', 1123, 'Bengkel');
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `pengajuan_tb` (
 --
 
 INSERT INTO `pengajuan_tb` (`id`, `nik`, `tg_berangkat`, `tg_pulang`, `tujuan`, `u_saku`, `u_hotel`, `u_trans`, `app_divhead`, `app_finance`, `CreatedDate`, `AppDateFin`, `AppDateDiv`, `AppFin`, `AppDiv`) VALUES
-(1, 23457, '2017-12-27', '2017-12-29', 'Batam', 70000, 200000, 100000, 'setuju', 'setuju', '2017-12-27', '2017-12-27', '2017-12-27', 'kdr', 'admin');
+(1, 23456, '2017-12-28', '2017-12-29', 'Jakarta', 150000, 500000, 300000, 'setuju', 'tidak setuju', '2017-12-28', '2017-12-28', '2017-12-28', 'kdr', 'tiar');
 
 -- --------------------------------------------------------
 
@@ -130,16 +130,19 @@ CREATE TABLE IF NOT EXISTS `user_tb` (
   `username` varchar(20) NOT NULL,
   `password` varchar(255) NOT NULL,
   `level` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `user_tb`
 --
 
 INSERT INTO `user_tb` (`id`, `nama`, `username`, `password`, `level`) VALUES
-(2, 'administrator', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'admin'),
-(3, 'simanjuntak', 'siman', '827ccb0eea8a706c4c34a16891f84e7b', 'karyawan'),
-(4, 'kodirun', 'kdr', '827ccb0eea8a706c4c34a16891f84e7b', 'finance');
+(2, 'Administrator', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'admin'),
+(3, 'Tiar Agisti', 'tiar', '827ccb0eea8a706c4c34a16891f84e7b', 'divhead'),
+(4, 'Kodirun', 'kdr', '827ccb0eea8a706c4c34a16891f84e7b', 'finance'),
+(5, 'Arigo', '23456', '827ccb0eea8a706c4c34a16891f84e7b', 'karyawan'),
+(6, 'Dwi Budi Kurniawan', '23457', '827ccb0eea8a706c4c34a16891f84e7b', 'karyawan'),
+(7, 'Nasrul Hidayah', '23458', '827ccb0eea8a706c4c34a16891f84e7b', 'karyawan');
 
 --
 -- Indexes for dumped tables
@@ -193,7 +196,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `user_tb`
 --
 ALTER TABLE `user_tb`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
