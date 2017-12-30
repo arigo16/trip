@@ -89,7 +89,7 @@
                             <td><?php echo $rr['tg_berangkat'];?></td>
                             <td><?php echo $rr['tg_pulang'];?></td>
                             <td><?php echo ucfirst($rr['tujuan']);?></td>
-							<td><?php echo ucfirst($rr['Akomodasi']);?></td>
+							<td><?php echo number_format($rr['Akomodasi']);?></td>
 							<td><?php echo ucfirst($rr['CreatedDate']);?></td>
                             <td><?php echo "[ ".$rr['app_divhead']." ] ".ucfirst($rr['AppDiv']);?></td>
                             <td><?php echo "[ ".$rr['app_finance']." ] ".ucfirst($rr['AppFin']);?></td>

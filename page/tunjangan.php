@@ -73,10 +73,10 @@
                         <tr>
 							
                             <td><?php echo $rr['id'];?></td>
-                            <td><?php echo $rr['jabatan_id'];?></td>
-							<td><?php echo $rr['uang_saku'];?></td>
-							<td><?php echo $rr['bea_hotel'];?></td>
-							<td><?php echo $rr['transport'];?></td>
+                            <td><?php echo number_format($rr['jabatan_id']);?></td>
+							<td><?php echo number_format($rr['uang_saku']);?></td>
+							<td><?php echo number_format($rr['bea_hotel']);?></td>
+							<td><?php echo number_format($rr['transport']);?></td>
                             <td>[<a href="index.php?page=tunjangan-edit&id=<?php echo $rr['id'];?>">Edit</a>] [<a href="act/tunjdel.php?id=<?php echo $rr['id'];?>" onclick="return confirm('Yakin ingin hapus data ?')">Hapus</a>]</td>
                         </tr>
                         <?php

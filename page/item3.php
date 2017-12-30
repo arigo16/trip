@@ -35,7 +35,7 @@
                         <td><?php echo $dd['tg_berangkat'];?></td>
                         <td><?php echo $dd['tg_pulang'];?></td>
                         <td><?php echo ucfirst($dd['tujuan']);?></td>
-						<td><?php echo ucfirst($dd['akomodasi']);?></td>
+						<td><?php echo number_format($dd['akomodasi']);?></td>
                     </tr>
                     <?php
                 }

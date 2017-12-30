@@ -27,10 +27,10 @@
                         <td><?php echo $rr['tg_berangkat'];?></td>
                         <td><?php echo $rr['tg_pulang'];?></td>
                         <td><?php echo ucfirst($rr['tujuan']);?></td>
-                        <td><?php echo $rr['u_saku'];?></td>
-                        <td><?php echo $rr['u_hotel'];?></td>
-                        <td><?php echo $rr['u_trans'];?></td>
-						<td><?php echo $rr['Akomodasi'];?></td>
+                        <td><?php echo number_format($rr['u_saku']);?></td>
+                        <td><?php echo number_format($rr['u_hotel']);?></td>
+                        <td><?php echo number_format($rr['u_trans']);?></td>
+						<td><?php echo number_format($rr['Akomodasi']);?></td>
                         <td><?php echo ucfirst($rr['app_finance']);?></td>
                         <td>[<a href="index.php?page=approval2&id=<?php echo $rr['id']; ?>"> Ubah </a> ]</td>
                         <?php

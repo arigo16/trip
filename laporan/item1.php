@@ -47,7 +47,8 @@ $d = $con->query("SELECT pengajuan_tb.*,karyawan_tb.nama,u_saku+u_hotel+u_trans 
     $pdf->Cell(30,6,$dd['tg_berangkat'],1,0);
     $pdf->Cell(30,6,$dd['tg_pulang'],1,0);
     $pdf->Cell(40,6,$dd['tujuan'],1,0); 
-	$pdf->Cell(30,6,$dd['akomodasi'],1,1); 
+	$uang = number_format($dd['Akomodasi']);
+	$pdf->Cell(30,6,$uang,1,1); 
 }
  
 $pdf->Output();
